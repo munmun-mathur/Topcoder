@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Tests]">
+  <test name="Test1(failed)" preserve-order="true">
+    <classes>
+      <class name="com.topcoder.Tests.DemandSideTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="endTest"/>
+          <include name="UserLogin"/>
+        </methods>
+      </class> <!-- com.topcoder.Tests.DemandSideTests -->
+      <class name="com.topcoder.Tests.CoreSideTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.topcoder.Tests.CoreSideTests -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Tests] -->
