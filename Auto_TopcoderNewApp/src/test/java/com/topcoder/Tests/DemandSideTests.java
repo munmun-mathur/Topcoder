@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -43,16 +44,21 @@ public class DemandSideTests {
     	 		//Initialise chrome browser
     	 		if (browser.equalsIgnoreCase("chrome")) {
     				System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+    				/*DesiredCapabilities capabilities = DesiredCapabilities.chrome();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("test-type");
                     capabilities.setCapability("chrome.binary","drivers/chromedriver.exe");
-                    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-                    driver = new ChromeDriver(capabilities);
+                    capabilities.setCapability(ChromeOptions.CAPABILITY, options);*/
+                    driver = new ChromeDriver();
     			}
     	 		//Initialise firefox browser
     			else if  (browser.equalsIgnoreCase("firefox")) {
     				driver= new FirefoxDriver();
+    			}
+    	 		//Initialise IE browser
+    			else if  (browser.equalsIgnoreCase("IE")) {
+    				System.setProperty("webdriver.ie.driver","drivers/IEDriverServer.exe");
+    				driver= new InternetExplorerDriver();
     			}
     			// Maximize the browser window
     			driver.manage().window().maximize();

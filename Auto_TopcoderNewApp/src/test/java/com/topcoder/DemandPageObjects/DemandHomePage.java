@@ -42,6 +42,7 @@ public class DemandHomePage {
 	public void verifyLoginPopup() {
 		homePageElement = webPageObj.findElement(loginLink);
 		homePageElement.click();
+		GeneralUtility.sleep(5000);
 		softAssert.assertTrue(webPageObj.verifyElementExists(accessBtn, "Access"),"Login popup not showing up.");
 		softAssert.assertAll();
 	}
