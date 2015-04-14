@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -64,7 +65,7 @@ public class DemandSideTests {
     				capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/37.0.1/bin/firefox"); //for linux
 
     				//capability.setCapability("binary", "C:\\Program Files\\Mozilla  Firefox\\msfirefox.exe"); //for windows                
-    				driver = new FirefoxDriver(capability);
+    				driver = new RemoteWebDriver(new URL("https://build.appirio.net:8443/jenkins/"), capability);
     				
     			}
     	 		//Initialise IE browser
