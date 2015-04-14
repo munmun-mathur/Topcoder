@@ -59,13 +59,13 @@ public class DemandSideTests {
     			}
     	 		//Initialise firefox browser
     			else if  (browser.equalsIgnoreCase("firefox")) {
-    				//driver= new FirefoxDriver();
-    				DesiredCapabilities capability = DesiredCapabilities.firefox();
-    				capability.setCapability("platform", Platform.ANY);
-    				capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/37.0.1/bin/firefox"); //for linux
+    				driver= new FirefoxDriver();
+    				//DesiredCapabilities capability = DesiredCapabilities.firefox();
+    				//capability.setCapability("platform", Platform.ANY);
+    				//capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/37.0.1/bin/firefox"); //for linux
 
     				//capability.setCapability("binary", "C:\\Program Files\\Mozilla  Firefox\\msfirefox.exe"); //for windows                
-    				driver = new RemoteWebDriver(new URL("https://build.appirio.net:8443/jenkins/"), capability);
+    				//driver = new RemoteWebDriver(new URL("https://build.appirio.net:8443/jenkins/"), capability);
     				
     			}
     	 		//Initialise IE browser
