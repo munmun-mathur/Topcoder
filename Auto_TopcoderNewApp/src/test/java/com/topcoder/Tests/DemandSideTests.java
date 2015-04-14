@@ -64,7 +64,7 @@ public class DemandSideTests {
     				capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/37.0.1/bin/firefox"); //for linux
 
     				//capability.setCapability("binary", "C:\\Program Files\\Mozilla  Firefox\\msfirefox.exe"); //for windows                
-    				driver = new RemoteWebDriver(capability);
+    				driver = new FirefoxDriver(capability);
     				
     			}
     	 		//Initialise IE browser
