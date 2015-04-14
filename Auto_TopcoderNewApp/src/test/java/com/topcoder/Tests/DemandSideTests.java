@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -53,7 +54,8 @@ public class DemandSideTests {
     			}
     	 		//Initialise firefox browser
     			else if  (browser.equalsIgnoreCase("firefox")) {
-    				driver= new FirefoxDriver();
+    				//driver= new FirefoxDriver();
+    				driver= new RemoteWebDriver(DesiredCapabilities.firefox());
     			}
     	 		//Initialise IE browser
     			else if  (browser.equalsIgnoreCase("IE")) {
