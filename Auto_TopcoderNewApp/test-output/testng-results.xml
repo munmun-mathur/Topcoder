@@ -2,48 +2,35 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Demand/Core Side Tests" duration-ms="17660" started-at="2015-04-14T11:00:36Z" finished-at="2015-04-14T11:00:54Z">
+  <suite name="Demand/Core Side Tests" duration-ms="49048" started-at="2015-04-14T12:10:38Z" finished-at="2015-04-14T12:11:27Z">
     <groups>
     </groups>
-    <test name="Demand Side Tests" duration-ms="17660" started-at="2015-04-14T11:00:36Z" finished-at="2015-04-14T11:00:54Z">
+    <test name="Demand Side Tests" duration-ms="49048" started-at="2015-04-14T12:10:38Z" finished-at="2015-04-14T12:11:27Z">
       <class name="com.topcoder.Tests.DemandSideTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.topcoder.Tests.DemandSideTests@37db1db7]" name="setUp" is-config="true" duration-ms="16519" started-at="2015-04-14T11:00:36Z" finished-at="2015-04-14T11:00:53Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.topcoder.Tests.DemandSideTests@2d73b676]" name="setUp" is-config="true" duration-ms="48959" started-at="2015-04-14T12:10:38Z" finished-at="2015-04-14T12:11:27Z">
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="verifyLoginPopup()[pri:0, instance:com.topcoder.Tests.DemandSideTests@37db1db7]" name="verifyLoginPopup" duration-ms="49" started-at="2015-04-14T11:00:53Z" description="Login popup" finished-at="2015-04-14T11:00:53Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="verifyLoginPopup()[pri:0, instance:com.topcoder.Tests.DemandSideTests@2d73b676]" name="verifyLoginPopup" duration-ms="48" started-at="2015-04-14T12:11:27Z" description="Login popup" finished-at="2015-04-14T12:11:27Z">
+          <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
-              <![CDATA[Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 16 milliseconds
+              <![CDATA[The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'Munmun-PC', ip: '192.168.0.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
-*** Element info: {Using=css selector, value=body > header > a.login.ng-scope > div:nth-child(2)}
-Session ID: 00823cad-acc5-4250-988a-894711ae99aa
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:1107/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 16 milliseconds
+              <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'Munmun-PC', ip: '192.168.0.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
-*** Element info: {Using=css selector, value=body > header > a.login.ng-scope > div:nth-child(2)}
-Session ID: 00823cad-acc5-4250-988a-894711ae99aa
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:1107/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
 	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:425)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at com.topcoder.General.WebPageObjectsActions.findElement(WebPageObjectsActions.java:42)
 	at com.topcoder.DemandPageObjects.DemandHomePage.verifyLoginPopup(DemandHomePage.java:43)
-	at com.topcoder.Tests.DemandSideTests.verifyLoginPopup(DemandSideTests.java:79)
+	at com.topcoder.Tests.DemandSideTests.verifyLoginPopup(DemandSideTests.java:88)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -70,43 +57,30 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
         </test-method> <!-- verifyLoginPopup -->
-        <test-method status="FAIL" signature="userLogin()[pri:0, instance:com.topcoder.Tests.DemandSideTests@37db1db7]" name="userLogin" duration-ms="29" started-at="2015-04-14T11:00:53Z" description="User login" finished-at="2015-04-14T11:00:53Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="userLogin()[pri:0, instance:com.topcoder.Tests.DemandSideTests@2d73b676]" name="userLogin" duration-ms="2" started-at="2015-04-14T12:11:27Z" description="User login" finished-at="2015-04-14T12:11:27Z">
+          <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
-              <![CDATA[Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 27 milliseconds
+              <![CDATA[The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'Munmun-PC', ip: '192.168.0.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
-*** Element info: {Using=id, value=a0-signin_easy_email}
-Session ID: 00823cad-acc5-4250-988a-894711ae99aa
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:1107/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 27 milliseconds
+              <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'Munmun-PC', ip: '192.168.0.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
-*** Element info: {Using=id, value=a0-signin_easy_email}
-Session ID: 00823cad-acc5-4250-988a-894711ae99aa
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:1107/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
 	at org.openqa.selenium.By$ById.findElement(By.java:214)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at com.topcoder.General.WebPageObjectsActions.findElement(WebPageObjectsActions.java:42)
 	at com.topcoder.DemandPageObjects.DemandHomePage.loginApp(DemandHomePage.java:57)
-	at com.topcoder.Tests.DemandSideTests.userLogin(DemandSideTests.java:86)
+	at com.topcoder.Tests.DemandSideTests.userLogin(DemandSideTests.java:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -133,13 +107,13 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
         </test-method> <!-- userLogin -->
-        <test-method status="FAIL" signature="createProject()[pri:0, instance:com.topcoder.Tests.DemandSideTests@37db1db7]" name="createProject" duration-ms="3" started-at="2015-04-14T11:00:53Z" description="Create project" finished-at="2015-04-14T11:00:53Z">
+        <test-method status="FAIL" signature="createProject()[pri:0, instance:com.topcoder.Tests.DemandSideTests@2d73b676]" name="createProject" duration-ms="2" started-at="2015-04-14T12:11:27Z" description="Create project" finished-at="2015-04-14T12:11:27Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.topcoder.Tests.DemandSideTests.createProject(DemandSideTests.java:92)
+	at com.topcoder.Tests.DemandSideTests.createProject(DemandSideTests.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -168,7 +142,7 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
             </full-stacktrace>
           </exception> <!-- java.lang.NullPointerException -->
         </test-method> <!-- createProject -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.topcoder.Tests.DemandSideTests@37db1db7]" name="endTest" is-config="true" duration-ms="1019" started-at="2015-04-14T11:00:53Z" finished-at="2015-04-14T11:00:54Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.topcoder.Tests.DemandSideTests@2d73b676]" name="endTest" is-config="true" duration-ms="1" started-at="2015-04-14T12:11:27Z" finished-at="2015-04-14T12:11:27Z">
         </test-method> <!-- endTest -->
       </class> <!-- com.topcoder.Tests.DemandSideTests -->
     </test> <!-- Demand Side Tests -->

@@ -7,6 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -54,8 +57,8 @@ public class DemandSideTests {
     			}
     	 		//Initialise firefox browser
     			else if  (browser.equalsIgnoreCase("firefox")) {
-    				//driver= new FirefoxDriver();
-    				driver= new RemoteWebDriver(DesiredCapabilities.firefox());
+    				driver= new FirefoxDriver();
+    				//driver= new RemoteWebDriver(DesiredCapabilities.firefox());
     			}
     	 		//Initialise IE browser
     			else if  (browser.equalsIgnoreCase("IE")) {
@@ -66,7 +69,10 @@ public class DemandSideTests {
     			driver.manage().window().maximize();
     			GeneralUtility.openUrl(driver, properties.getProperty("demandURL"));
     			GeneralUtility.sleep(6000);     
-			} catch (FileNotFoundException e) {
+    			// Take snapshot of browser
+    	        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    	        FileUtils.copyFile(srcFile, new File("ffsnapshot.png"));
+    	    } catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
 				e.printStackTrace();
