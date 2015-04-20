@@ -4,23 +4,7 @@
   <groupId>com.topcoder.pageobjects</groupId>
   <artifactId>Auto_TopcoderNewAppCode</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <executions>
-    <execution>
-      <id>build-and-start-integration-server</id>
-      <goals>
-        <goal>exec</goal>
-      </goals>
-      <phase>pre-integration-test</phase>
-      <configuration>
-        <environmentVariables>
-          <WORK_DIR>${project.build.directory}/docker-work</WORK_DIR>
-          <DOCKER_FILE_LOCATION>${project.basedir}/src/main/assembly/Dockerfile</DOCKER_FILE_LOCATION>
-          <DISTRIBUTION_FILE_LOCATION>${project.build.directory}/myhippoproject.tar.gz</DISTRIBUTION_FILE_LOCATION>
-        </environmentVariables>
-        <executable>${project.basedir}/src/test/script/start-integration-server.sh</executable>
-      </configuration>
-    </execution>
-  </executions>
+ 
   <packaging>jar</packaging>
 
   <dependencies>
@@ -50,6 +34,7 @@
     </testResources>
   
     <plugins>
+    
     <plugin>
             <groupId>org.testng.xslt</groupId>
             <artifactId>testng-xslt-plugin</artifactId>
@@ -88,6 +73,7 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+     
     </plugins>
   </build>
   <!-- profiles -->
