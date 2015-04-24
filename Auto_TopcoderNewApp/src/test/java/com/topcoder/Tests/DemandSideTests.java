@@ -16,6 +16,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -59,13 +61,12 @@ public class DemandSideTests {
     			}
     	 		//Initialise firefox browser
     			else if  (browser.equalsIgnoreCase("firefox")) {
-    				driver= new FirefoxDriver();
-    				//DesiredCapabilities capability = DesiredCapabilities.firefox();
-    				//capability.setCapability("platform", Platform.ANY);
-    				//capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/37.0.1/bin/firefox"); //for linux
-
-    				//capability.setCapability("binary", "C:\\Program Files\\Mozilla  Firefox\\msfirefox.exe"); //for windows                
-    				//driver = new RemoteWebDriver(new URL("https://build.appirio.net:8443/jenkins/"), capability);
+    				//driver= new FirefoxDriver();
+    				ProfilesIni profile = new ProfilesIni();
+    				 
+    				FirefoxProfile myprofile = profile.getProfile("FFProfile/ucitnccj.NewProfile");
+    				 
+    				driver = new FirefoxDriver(myprofile);
     				
     			}
     	 		//Initialise IE browser
