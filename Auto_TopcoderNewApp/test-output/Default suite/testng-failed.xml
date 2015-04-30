@@ -5,8 +5,9 @@
     <classes>
       <class name="com.topcoder.Tests.DemandSideTests">
         <methods>
+          <include name="verifyLoginPopup"/>
           <include name="setUp"/>
-          <include name="endTest"/>
+          <include name="userLogin"/>
           <include name="createProject"/>
         </methods>
       </class> <!-- com.topcoder.Tests.DemandSideTests -->

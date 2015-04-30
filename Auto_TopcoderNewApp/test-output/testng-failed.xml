@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="5" name="Failed suite [Demand/Core Side Tests]">
-  <test name="Demand Side Tests(failed)" preserve-order="true">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)" preserve-order="true">
     <classes>
       <class name="com.topcoder.Tests.DemandSideTests">
         <methods>
+          <include name="verifyLoginPopup"/>
           <include name="setUp"/>
-          <include name="endTest"/>
+          <include name="userLogin"/>
           <include name="createProject"/>
         </methods>
       </class> <!-- com.topcoder.Tests.DemandSideTests -->
     </classes>
-  </test> <!-- Demand Side Tests(failed) -->
-</suite> <!-- Failed suite [Demand/Core Side Tests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

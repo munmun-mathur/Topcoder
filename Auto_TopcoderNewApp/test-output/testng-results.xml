@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105061" started-at="2015-04-24T17:39:52Z" finished-at="2015-04-24T17:41:37Z">
+  <suite name="Default suite" duration-ms="96603" started-at="2015-04-30T13:16:44Z" finished-at="2015-04-30T13:18:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105061" started-at="2015-04-24T17:39:52Z" finished-at="2015-04-24T17:41:37Z">
+    <test name="Default test" duration-ms="96603" started-at="2015-04-30T13:16:44Z" finished-at="2015-04-30T13:18:21Z">
       <class name="com.topcoder.Tests.DemandSideTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.topcoder.Tests.DemandSideTests@33d02ffb]" name="setUp" is-config="true" duration-ms="56596" started-at="2015-04-24T17:39:52Z" finished-at="2015-04-24T17:40:48Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.topcoder.Tests.DemandSideTests@62bb8ae8]" name="setUp" is-config="true" duration-ms="53601" started-at="2015-04-30T13:16:44Z" finished-at="2015-04-30T13:17:38Z">
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginPopup()[pri:0, instance:com.topcoder.Tests.DemandSideTests@33d02ffb]" name="verifyLoginPopup" duration-ms="6661" started-at="2015-04-24T17:40:48Z" description="Login popup" finished-at="2015-04-24T17:40:55Z">
+        <test-method status="PASS" signature="verifyLoginPopup()[pri:0, instance:com.topcoder.Tests.DemandSideTests@62bb8ae8]" name="verifyLoginPopup" duration-ms="6997" started-at="2015-04-30T13:17:38Z" description="Login popup" finished-at="2015-04-30T13:17:45Z">
         </test-method> <!-- verifyLoginPopup -->
-        <test-method status="PASS" signature="userLogin()[pri:0, instance:com.topcoder.Tests.DemandSideTests@33d02ffb]" name="userLogin" duration-ms="14604" started-at="2015-04-24T17:40:55Z" description="User login" finished-at="2015-04-24T17:41:10Z">
+        <test-method status="PASS" signature="userLogin()[pri:0, instance:com.topcoder.Tests.DemandSideTests@62bb8ae8]" name="userLogin" duration-ms="13371" started-at="2015-04-30T13:17:45Z" description="User login" finished-at="2015-04-30T13:17:58Z">
         </test-method> <!-- userLogin -->
-        <test-method status="PASS" signature="createProject()[pri:0, instance:com.topcoder.Tests.DemandSideTests@33d02ffb]" name="createProject" duration-ms="26273" started-at="2015-04-24T17:41:10Z" description="Create project" finished-at="2015-04-24T17:41:36Z">
+        <test-method status="PASS" signature="createProject()[pri:0, instance:com.topcoder.Tests.DemandSideTests@62bb8ae8]" name="createProject" duration-ms="22329" started-at="2015-04-30T13:17:58Z" description="Create project" finished-at="2015-04-30T13:18:21Z">
         </test-method> <!-- createProject -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.topcoder.Tests.DemandSideTests@33d02ffb]" name="endTest" is-config="true" duration-ms="889" started-at="2015-04-24T17:41:36Z" finished-at="2015-04-24T17:41:37Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.topcoder.Tests.DemandSideTests@62bb8ae8]" name="endTest" is-config="true" duration-ms="280" started-at="2015-04-30T13:18:21Z" finished-at="2015-04-30T13:18:21Z">
         </test-method> <!-- endTest -->
       </class> <!-- com.topcoder.Tests.DemandSideTests -->
     </test> <!-- Default test -->

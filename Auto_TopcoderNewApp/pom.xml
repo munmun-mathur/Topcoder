@@ -18,6 +18,12 @@
         <artifactId>selenium-java</artifactId>
         <version>2.45.0</version>
     </dependency>
+    <dependency>
+	<groupId>com.amazonaws</groupId>
+	<artifactId>aws-java-sdk</artifactId>
+	<version>1.0.002</version>
+</dependency>
+    
   </dependencies>
   <build>
     <resources>
@@ -126,13 +132,20 @@
     </profile>
     <!-- environments -->
     <profile>
-      <id>localhost</id>
+      <id>linuxec2</id>
       <properties>
-        <site.url>http://localhost/</site.url>
+        <site.url>http://127.0.0.1:8080/</site.url>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+    </profile>
+    <profile>
+      <id>localhost</id>
+      <properties>
+        <site.url>http://localhost/</site.url>
+      </properties>
+     
     </profile>
     <profile>
       <id>devhost</id>
@@ -165,7 +178,7 @@
     <profile>
       <id>grid</id>
       <properties>
-        <grid.url>http://localhost:4444/wd/hub/</grid.url>
+        <grid.url>http://127.0.0.1:8080/wd/hub/</grid.url>
       </properties>
     </profile>
   </profiles>

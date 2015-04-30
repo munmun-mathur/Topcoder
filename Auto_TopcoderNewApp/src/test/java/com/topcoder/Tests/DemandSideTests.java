@@ -5,25 +5,26 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.PropertiesCredentials;
+import com.amazonaws.services.ec2.AmazonEC2Client;
+import com.amazonaws.services.ec2.model.RunInstancesRequest;
+import com.amazonaws.services.ec2.model.RunInstancesResult;
 import com.topcoder.DemandPageObjects.CreateProjectPage;
 import com.topcoder.DemandPageObjects.DemandHomePage;
 import com.topcoder.General.GeneralUtility;
@@ -34,6 +35,7 @@ public class DemandSideTests {
 	private static CreateProjectPage createProjPage = null;
 	java.util.Enumeration<Object> enuKeys =null;
 	File file = new File("src/test/resources/userData.properties");
+	File file1 = new File("src/test/resources/AWSCredentials.properties");
 	FileInputStream fileInput =null;
 	Properties properties = new Properties();    
 	String browser= "";
@@ -41,6 +43,23 @@ public class DemandSideTests {
 	@BeforeClass
 	public void setUp() {
 		 try {
+			 /************************Code to access Linux ec2 instance******************************************
+			
+			 	RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
+				        	
+				  runInstancesRequest.withImageId("ami-630c3b53")
+				                     .withInstanceType("t2.micro")
+				                     .withMinCount(1)
+				                     .withMaxCount(10)
+				                     .withKeyName("linux3");
+				                     
+				  AWSCredentials awsCredentials = new PropertiesCredentials(new FileInputStream(file1));
+				  AmazonEC2Client amazonEC2Client = new AmazonEC2Client(awsCredentials);
+				  RunInstancesResult runInstancesResult = amazonEC2Client.runInstances(runInstancesRequest);
+				  System.out.println(runInstancesResult.toString());
+				  
+			***************************************************************************************************/
+				  
 	    	 	//Read properties file
     	 		fileInput = new FileInputStream(file);
     	 		properties.load(fileInput);
